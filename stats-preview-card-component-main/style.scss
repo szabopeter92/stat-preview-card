@@ -1,0 +1,152 @@
+$Very-dark-blue: hsl(233, 47%, 7%);
+$Dark-desaturated-blue: hsl(244, 38%, 16%);
+$Soft-violet: hsla(277, 64%, 61%, .7);
+$White: hsl(0, 0%, 100%);
+$Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+$Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+
+    font-size: 15px;
+    font-family: "Inter", sans-serif;
+    background-color: $Very-dark-blue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.attribution { color:$Slightly-transparent-white; font-size: 11px; text-align: center;  margin-top: 20px;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.container{
+    max-width: 1440px;
+    height: 400px;
+    display: grid;
+    grid-template-columns: minmax(50%,50%) auto;
+    text-align: left;
+    background-color: $Dark-desaturated-blue;
+    border-radius: 8px;
+}
+.content{
+    font-family: "Lexend Deca", sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 70px;
+    color: $White;
+}
+.hero-img{
+    border-radius: 0 10px 8px 0;
+    background: url("images/image-header-desktop.jpg") no-repeat center center;
+    background-size: cover;
+    height: 400px;
+}
+
+.overlay{
+    border-radius: 0 10px 8px 0;
+    position: relative;
+    height: 100%;
+    background-color: $Soft-violet;
+}
+
+.content h1{
+    margin-bottom :30px;
+    font-size: 2.2rem;
+    line-height: 1.3;
+}
+
+.content h1 span{
+
+    color:hsl(277, 64%, 61%,);
+}
+
+.content p{
+
+    color: $Slightly-transparent-white;
+    line-height: 1.6;
+    
+}
+
+.grid{
+
+    text-transform: uppercase;
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: $Slightly-transparent-white;
+}
+
+.grid span{
+    text-transform: lowercase;
+    padding-bottom: 5px;
+    color: $White;
+    display: block;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.grid div:nth-child(3) span{
+
+    text-transform: uppercase;
+}
+
+
+@media (max-width: 925px){
+
+   
+    .container{
+       margin-top: 300px;
+       max-width: 400px;
+       height: auto;
+       display: flex;
+       flex-flow: column;
+       text-align: center;
+    }
+
+    .hero-img{
+
+        order: 1;
+        width: 100%;
+    }
+
+    .hero-img, .overlay{
+
+        border-radius: 8px 8px 0 0;
+    }
+
+    .content{
+
+        order: 2;
+    }
+
+    .content h1{
+
+        font-size: 1.8rem;
+    }
+    .grid{
+
+        display: block;
+        
+    }
+    .grid > div{
+
+        margin-bottom: 20px;
+    }
+
+
+
+    
+}
+
+
+
